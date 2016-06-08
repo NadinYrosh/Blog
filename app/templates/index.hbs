@@ -5,8 +5,7 @@
 <div class="row">
   {{#each model as |post|}}
     <div class="col-xs-4">
-      <h4>{{post.headline}}</h4>
-      <img src={{post.image}}>
+      {{post-tile post=post}}
     </div>
   {{/each}}
 </div>

@@ -1,1 +1,6 @@
-{{yield}}
+<h4>{{post.headline}}<img src={{post.image}}></h4>
+{{#if isImageShowing }}
+     <p>{{rental.content}}</p>
+   {{else}}
+     <button class="btn">Read more</button>
+  {{/if}}
