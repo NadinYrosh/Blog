@@ -1,14 +1,18 @@
-<h1> Welcome to Our Blog </h1>
+<h1> Welcome to Coffee Blog </h1>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h4>There really can’t be any adult in this great big world that has never tried coffee. It’s consumed everywhere, and judging by the amount of Starbucks locations in the United States alone, (in 2012, there were 10,924!) we love our caffeine.
+
+And that’s fine. In fact, there are many advantages to being one of the 54 percent of Americans over 18 who drink coffee everyday. Coffee can be pretty amazing for your brain, your skin and your body. Read on to discover 11 reasons you should wake up and smell the coffee...</h4>
 
 <div class="row">
   {{#each model as |post|}}
-    <div class="col-xs-4">
-      {{post-tile post=post}}
-    </div>
+    <!-- <div class="col-xs-4"> -->
+      {{post-tile post=post destroyPost="destroyPost"}}
+    <!-- </div> -->
   {{/each}}
 </div>
+
+{{new-post save2="save3"}}
 
 
 {{#link-to 'about'}}About{{/link-to}}

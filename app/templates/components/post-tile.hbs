@@ -1,6 +1,10 @@
-<h4>{{post.headline}}<img src={{post.image}}></h4>
-{{#if isImageShowing }}
-     <p>{{rental.content}}</p>
-   {{else}}
-     <button class="btn">Read more</button>
-  {{/if}}
+<div class="post">
+  <h2>{{post.headline}}</h2><img src={{post.image}}>
+  <p>{{post.writter}} {{post.date}}</p>
+  {{#if isContentShowing }}
+      <p{{action 'hideContent'}}>{{post.content}}</p>
+     {{else}}
+       <button class="btn" {{action 'showContent'}}>Read more</button>
+    {{/if}}
+    <button class="btn" {{action 'delete' post}}>Delete</button>
+</div>
